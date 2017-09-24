@@ -16,15 +16,27 @@ import org.jointheleague.graphical.robot.Robot;
 	/*  Make the Robot move around the screen when the arrow keys are pressed... */
 	private void moveRobot(int keyPressed) throws InterruptedException {
 	    // 0. Print out the keyPressed variable and write down the numbers for each arrow key
-	
+	    System.out.println(keyPressed);
 	    // 1. If the up arrow is pressed, use microMove() the Robot up the screen.
-		
+		if(keyPressed==38) {
+	    rob.setAngle(0);
+		rob.microMove(1);			
+		}
 	    // 2. If the down arrow is pressed, use microMove() the Robot down.
-		
+		if(keyPressed==40) {
+			rob.setAngle(180);
+			rob.microMove(1);			
+			}
 	    // 3. If the left arrow is pressed, use microMove() to make the Robot move left. Hint: Make sure to end with the Robot facing UP.
-	  
+		if(keyPressed==37) {
+			rob.setAngle(270);
+			rob.microMove(1);			
+			}	    
 	    // 4. If right is pressed, use  microMove() to make the Robot move right.
-	   
+		if(keyPressed==39) {
+			rob.setAngle(90);
+			rob.microMove(1);			
+			}	  
 	    // 5. Then move the Robot to RD-2D for a surprise! 
 	}
 
